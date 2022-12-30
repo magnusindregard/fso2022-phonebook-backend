@@ -21,6 +21,7 @@ if (process.argv.length < 5) {
         .connect(url)
         .then((result) => {
             console.log('Phonebook')
+            console.log(result)
             Person.find({})
                 .then(result => {
                     result.forEach(person => {
@@ -37,6 +38,7 @@ if (process.argv.length < 5) {
     .connect(url)
     .then((result) => {
 
+        console.log(result)
         const person = new Person({
         name: name,
         number: number

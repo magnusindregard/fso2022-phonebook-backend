@@ -27,13 +27,6 @@ app.use(express.json())
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :body'))
 app.use(cors())
 
-const generateRandomId = () => {
-    const randomId = Math.round(Math.random() * 1000000)
-    return randomId
-}
-
-const isInList = (element) => element.name === newName;
-
 app.get('/', (request, response) => {
     response.send('<h1>Phonebook API</h1>')
 })
